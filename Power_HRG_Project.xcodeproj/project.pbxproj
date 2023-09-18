@@ -60,7 +60,7 @@
 /* Begin PBXFileReference section */
 		9CA168AC2AB629080069C818 /* Power_HRG_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Power_HRG_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CA168AF2AB629080069C818 /* Power_HRG_ProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Power_HRG_ProjectApp.swift; sourceTree = "<group>"; };
-		9CA168B12AB629080069C818 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9CA168B12AB629080069C818 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; wrapsLines = 1; };
 		9CA168B32AB6290A0069C818 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CA168B62AB6290A0069C818 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9CA168BE2AB79B7C0069C818 /* Proxima Nova ExCn Black It.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova ExCn Black It.otf"; sourceTree = "<group>"; };
@@ -145,7 +145,7 @@
 				9CA169182AB7AA2E0069C818 /* Views */,
 				9CA169172AB7AA210069C818 /* Model */,
 				9CA168B32AB6290A0069C818 /* Assets.xcassets */,
-				9CA168BD2AB79B7C0069C818 /* Font */,
+				9CA168BD2AB79B7C0069C818 /* Fonts */,
 				9CA168B52AB6290A0069C818 /* Preview Content */,
 			);
 			path = Power_HRG_Project;
@@ -159,7 +159,7 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		9CA168BD2AB79B7C0069C818 /* Font */ = {
+		9CA168BD2AB79B7C0069C818 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
 				9CA168BE2AB79B7C0069C818 /* Proxima Nova ExCn Black It.otf */,
@@ -205,7 +205,7 @@
 				9CA168E62AB79B7C0069C818 /* Proxima Nova ExCn Reg.otf */,
 				9CA168E72AB79B7C0069C818 /* Proxima Nova Sbold It.otf */,
 			);
-			path = Font;
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		9CA169172AB7AA210069C818 /* Model */ = {
