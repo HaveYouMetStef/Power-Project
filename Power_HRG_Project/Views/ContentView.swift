@@ -8,7 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    struct Constants {
+      static let BorderRadiusMd: CGFloat = 6
+      static let PaddingMd: CGFloat = 24
+    }
+    
     var body: some View {
+        
         VStack(alignment: .leading, spacing: 16) {
             HStack(alignment: .top, spacing: 20) {
                 Image("Power Logo")
@@ -19,15 +26,18 @@ struct ContentView: View {
                     VStack(alignment: .leading, spacing: 5){
                         HStack {
                         Text("Power HRG")
-                            .font(.system(size: 22, weight: .bold))
+                                .font(Font.custom("Proxima Nova", size: 22)
+                                    .weight(.bold))
                        
                             Text("COMPANY")
                                 .foregroundColor(Color(red: 0.58, green: 0.66, blue: 0.72))
                                 .background(Color(red: 0, green: 0.34, blue: 0.81).opacity(0.05))
-                                .font(.system(size: 11, weight: .bold))
+                                .font(Font.custom("Proxima Nova", size: 11)
+                                    .weight(.bold))
                         }
                         Text("Technology")
-                            .font(.system(size: 15, weight: .medium))
+                            .font(Font.custom("Proxima Nova", size: 12)
+                                .weight(.semibold))
                             .foregroundColor(.gray)
                         Text("[www.powerhrg.com](www.powerhrg.com)")
                             .font(.system(size: 14))
@@ -82,14 +92,33 @@ struct ContentView: View {
                         .cornerRadius(4)
                         .foregroundColor(.blue)
                 }
+              
                 .padding(.leading, 8)
+                
             }
             
+            //MARK - Employees Section
+
+            
+            
             Spacer()
+            EmployeeListView()
         }
-        .padding()
+        .padding(Constants.PaddingMd)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+            .background(.white)
+            .cornerRadius(Constants.BorderRadiusMd)
+            .overlay(
+            RoundedRectangle(cornerRadius: Constants.BorderRadiusMd)
+            .inset(by: -0.5)
+            .stroke(Color(red: 0.89, green: 0.91, blue: 0.94), lineWidth: 1)
+            )
+
+            
     }
+    
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
