@@ -98,9 +98,6 @@ struct ContentView: View {
             }
             
             //MARK - Employees Section
-
-            
-            
             Spacer()
             EmployeeListView()
         }
