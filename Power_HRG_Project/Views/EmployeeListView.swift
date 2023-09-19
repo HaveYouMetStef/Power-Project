@@ -9,9 +9,10 @@ import SwiftUI
 
 struct EmployeeListView: View {
     
+    //MARK: Variables
     @State private var isEmployeeListVisible = false
     
-    //Constants
+    //MARK: Constants
     struct Constants {
         static let BorderRadiusMd: CGFloat = 6
         static let PaddingMd: CGFloat = 24
@@ -27,12 +28,13 @@ struct EmployeeListView: View {
         
     ]
     
-    
+    //MARK: Start of Body
     var body: some View {
         NavigationView {
             ZStack {
                 VStack(alignment: .leading, spacing: 18) {
-                    // Title 4
+                    
+                    //MARK: Employees Section
                     Text("Employees")
                         .font(
                             Font.custom("Proxima Nova", size: 16)
@@ -41,7 +43,7 @@ struct EmployeeListView: View {
                         .foregroundColor(Color(red: 0.14, green: 0.17, blue: 0.26))
                         .frame(width: 84, alignment: .leading)
                     
-                    //Employee Jason Cypret
+                    //Employee - Jason Cypret
                     HStack(spacing: 15) {
                         
                         Text("JC")
@@ -122,30 +124,30 @@ struct EmployeeListView: View {
                         }
                     }
                     
-                    //Future Employee - Stef Castillo
-                    //                HStack(spacing: 15) {
-                    //                    Rectangle()
-                    //                      .foregroundColor(.clear)
-                    //                      .frame(width: 38, height: 38)
-                    //                      .background(
-                    //                        Image("Stef_Headshot_2023")
-                    //                          .resizable()
-                    //                          .aspectRatio(contentMode: .fill)
-                    //                          .frame(width: 38, height: 38)
-                    //                          .clipped()
-                    //                      )
-                    //                      .cornerRadius(100)
-                    //
-                    //
-                    //                    VStack(alignment: .leading, spacing: 3) {
-                    //                        Text("Stef Castillo")
-                    //                            .font(.headline)
-                    //                        Text("Associate iOS Developer")
-                    //                            .font(.subheadline)
-                    //                            .foregroundColor(.gray)
-                    //                    }
-                    //                }
-                    
+//                    Future Employee - Stef Castillo
+//                                    HStack(spacing: 15) {
+//                                        Rectangle()
+//                                          .foregroundColor(.clear)
+//                                          .frame(width: 38, height: 38)
+//                                          .background(
+//                                            Image("Stef_Headshot_2023")
+//                                              .resizable()
+//                                              .aspectRatio(contentMode: .fill)
+//                                              .frame(width: 38, height: 38)
+//                                              .clipped()
+//                                          )
+//                                          .cornerRadius(100)
+//
+//
+//                                        VStack(alignment: .leading, spacing: 3) {
+//                                            Text("Stef Castillo")
+//                                                .font(.headline)
+//                                            Text("Associate iOS Developer")
+//                                                .font(.subheadline)
+//                                                .foregroundColor(.gray)
+//                                        }
+//                                    }
+                    //MARK: End of Employees Section
                     NavigationLink(destination: showEmployeeList(employees: employees), isActive: $isEmployeeListVisible) {
                                         EmptyView()
                                     }
@@ -153,8 +155,10 @@ struct EmployeeListView: View {
                     
                     VStack(alignment: .center, spacing: 8) {
                         HStack(alignment: .firstTextBaseline, spacing: 8) {
+                            //MARK: View All Button
                             Button(action: {
-                                // Message button action
+                               
+                                //When toggled, the list view will appear
                                 isEmployeeListVisible.toggle()
                             }) {
                                 // View All - Button
@@ -171,8 +175,8 @@ struct EmployeeListView: View {
                                 .padding(.top)
                         }
                     }
-                    //                .padding(.horizontal, 34)
-                    //                .padding(.vertical, 7)
+                    .padding(.horizontal, 34)
+                    .padding(.vertical, 7)
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                     .cornerRadius(4)
                 }
@@ -187,9 +191,10 @@ struct EmployeeListView: View {
                 )
             }
         }
+        //MARK: End of Body
     }
     
-    //MARK - Employee Row View
+    //MARK: Employee Row View
     struct EmployeeRowView: View {
         var employee: Employee
         
@@ -213,13 +218,14 @@ struct EmployeeListView: View {
     }
 }
 
-//Methods
+//MARK: Methods & Extensions
 extension EmployeeListView {
+    //Function will display a list view when someone presses the "View All" Button
     func showEmployeeList(employees: [Employee]) -> some View {
         return List(employees, id: \.id) { employee in
             EmployeeRowView(employee: employee)
         }
-//        .navigationBarTitle("Employees", displayMode: .inline)
+
     }
 }
 

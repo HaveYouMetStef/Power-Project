@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    //Variable
+    //MARK: Variables & Constants
     @State private var isFollowing = false
     
     //Allows you to check what font's you're able to use.
@@ -28,9 +28,11 @@ struct ContentView: View {
         static let PaddingMd: CGFloat = 24
     }
     
+    //MARK: Start of Body
     var body: some View {
         
         VStack {
+            //MARK: Power HRG Section
             VStack(alignment: .leading, spacing: 16) {
                 HStack(alignment: .top, spacing: 20) {
                     Image("Power Logo")
@@ -91,7 +93,7 @@ struct ContentView: View {
                 .padding(.bottom, 16)
                 
                 
-                //MARK - About Section
+                //MARK: About Section
                 
                 Text("**About**")
                     .font(
@@ -110,10 +112,10 @@ struct ContentView: View {
                     .padding(.bottom)
                 
                 
-                
+                //MARK: Follow and Message Buttons
                 HStack {
                     Button(action: {
-                        // Follow button action
+                        // When pressed the button will change from "Follow" to "Following" and the background will also turn green.
                         isFollowing.toggle()
                     }) {
                         Text(isFollowing ? "Following" : "Follow")
@@ -156,10 +158,13 @@ struct ContentView: View {
                     .inset(by: -0.5)
                     .stroke(Color(red: 0.89, green: 0.91, blue: 0.94), lineWidth: 1)
             )
-            //MARK - Employees Section
-
+            //End of ZStack to the first section
+            
+            //MARK: Employees Section
+            //will display the second section of the employees screen
             EmployeeListView()
         }
+        //MARK: End of Body
     }
 }
 
