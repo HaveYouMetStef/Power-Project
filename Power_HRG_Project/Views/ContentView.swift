@@ -9,6 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     
+    //Variable
+    @State private var isFollowing = false
+    
     //Allows you to check what font's you're able to use.
     //    init() {
     //        for familyName in UIFont.familyNames {
@@ -111,12 +114,14 @@ struct ContentView: View {
                 HStack {
                     Button(action: {
                         // Follow button action
+                        isFollowing.toggle()
                     }) {
-                        Text("Follow")
+                        Text(isFollowing ? "Following" : "Follow")
                             .font(.custom("ProximaNova-Regular", size: 16)
                                 .weight(.semibold))
                             .frame(maxWidth: .infinity)
                             .frame(height: 40)
+                            .background(isFollowing ? Color.green : Color(red: 0, green: 0.34, blue: 0.81))
                             .background(Color(red: 0, green: 0.34, blue: 0.81))
                             .cornerRadius(4)
                             .foregroundColor(.white)
