@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C577EF62AC4ED0F00534D67 /* CompanyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C577EF52AC4ED0F00534D67 /* CompanyHeaderView.swift */; };
+		9C577EF82AC4ED8C00534D67 /* AboutSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C577EF72AC4ED8C00534D67 /* AboutSectionView.swift */; };
+		9C577EFA2AC4EDEA00534D67 /* FollowMessageButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C577EF92AC4EDEA00534D67 /* FollowMessageButtonsView.swift */; };
 		9CA168B02AB629080069C818 /* Power_HRG_ProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA168AF2AB629080069C818 /* Power_HRG_ProjectApp.swift */; };
 		9CA168B22AB629080069C818 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA168B12AB629080069C818 /* ContentView.swift */; };
 		9CA168B42AB6290A0069C818 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CA168B32AB6290A0069C818 /* Assets.xcassets */; };
@@ -58,6 +61,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C577EF52AC4ED0F00534D67 /* CompanyHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyHeaderView.swift; sourceTree = "<group>"; };
+		9C577EF72AC4ED8C00534D67 /* AboutSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSectionView.swift; sourceTree = "<group>"; };
+		9C577EF92AC4EDEA00534D67 /* FollowMessageButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowMessageButtonsView.swift; sourceTree = "<group>"; };
 		9CA168AC2AB629080069C818 /* Power_HRG_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Power_HRG_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CA168AF2AB629080069C818 /* Power_HRG_ProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Power_HRG_ProjectApp.swift; sourceTree = "<group>"; };
 		9CA168B12AB629080069C818 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; wrapsLines = 1; };
@@ -121,6 +127,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C577EFB2AC4EE2200534D67 /* Reusable Components */ = {
+			isa = PBXGroup;
+			children = (
+				9C577EF52AC4ED0F00534D67 /* CompanyHeaderView.swift */,
+				9C577EF72AC4ED8C00534D67 /* AboutSectionView.swift */,
+				9C577EF92AC4EDEA00534D67 /* FollowMessageButtonsView.swift */,
+			);
+			path = "Reusable Components";
+			sourceTree = "<group>";
+		};
 		9CA168A32AB629080069C818 = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +237,7 @@
 			children = (
 				9CA168B12AB629080069C818 /* ContentView.swift */,
 				9CA169132AB7A7CD0069C818 /* EmployeeListView.swift */,
+				9C577EFB2AC4EE2200534D67 /* Reusable Components */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -339,7 +356,10 @@
 			files = (
 				9CA168B22AB629080069C818 /* ContentView.swift in Sources */,
 				9CA169162AB7A9260069C818 /* Employee.swift in Sources */,
+				9C577EF82AC4ED8C00534D67 /* AboutSectionView.swift in Sources */,
 				9CA168B02AB629080069C818 /* Power_HRG_ProjectApp.swift in Sources */,
+				9C577EFA2AC4EDEA00534D67 /* FollowMessageButtonsView.swift in Sources */,
+				9C577EF62AC4ED0F00534D67 /* CompanyHeaderView.swift in Sources */,
 				9CA169142AB7A7CD0069C818 /* EmployeeListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
